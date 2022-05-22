@@ -1,11 +1,34 @@
 #!/bin/bash
 
+urlPath=$1
+outPath=$2
+if [ -z "$outPath" ];then
+    outPath=""
+fi
+
 function getHash()
 {
-    wget $1 -q -O temp
-    hash=$(openssl dgst -sha256 -binary temp | openssl base64 -A)
-    rm -rf temp
+    if [ ! -d "temp" ];then
+        mkdir temp
+    fi
+    wget $1 -q -O temp/temp
+    hash=$(openssl dgst -sha256 -binary temp/temp | openssl base64 -A)
     echo $hash
+}
+
+function cleanTemp()
+{
+    rm -rf temp
+}
+
+function writeTxt()
+{
+    echo -e "$1" >> ${outPath}freecdn-manifest.txt
+}
+
+function cleanTxt()
+{
+    rm -rf ${outPath}freecdn-manifest.txt
 }
 
 function testCDN()
@@ -61,45 +84,26 @@ function getCDN()
             urls+=($url)
         fi
     done
-    if [ ${#urls[@]} > 0  ];then
-        echo -e "$1" >> freecdn-manifest.txt
+    if [ ${#urls[@]} -gt 0  ];then
+        writeTxt "$1"
         for url in ${urls[*]}
         do
-            echo -e "\t$url" >> freecdn-manifest.txt
+            writeTxt "\t$url"
         done
     fi
     echo ""
-    # cdn1=$(testCDN $hash $1 fastly)
-    # cdn2=$(testCDN $hash $1 unpkg)
-    # cdn3=$(testCDN $hash $1 bootcdn)
-    # echo "【CDN】fastly url:$cdn1"
-    # echo "【CDN】unpkg url:$cdn2"
-    # echo "【CDN】bootcdn url:$cdn3"
-    # echo ""
-    # if [ -n "$cdn1" ] || [ -n "$cdn2" ] || [ -n "$cdn3" ] ; then
-    #     echo -e "$1" >> freecdn-manifest.txt
-    #     if [ "$cdn1" ];then
-    #         echo -e "\t$cdn1" >> freecdn-manifest.txt
-    #      fi
-    #     if [ "$cdn2" ];then
-    #         echo -e "\t$cdn2" >> freecdn-manifest.txt
-    #     fi
-    #     if [ "$cdn3" ];then
-    #         echo -e "\t$cdn3" >> freecdn-manifest.txt
-    #     fi
-    #     echo -e "\thash=$hash" >> freecdn-manifest.txt
-    # fi
 }
 
-if [ -z "$1" ];then
+if [ -z "$urlPath" ];then
     echo "请传入链接列表文件，以便生成清单"
 else
-    rm -rf freecdn-manifest.txt
-    for line in $(cat $1)
+    cleanTxt
+    for line in $(cat $urlPath)
     do
         if [[ $line != "#"* ]] && [ "$line" ];then
             getCDN $line
-            echo "" >> freecdn-manifest.txt
+            writeTxt ""
         fi
     done
+    cleanTemp
 fi
