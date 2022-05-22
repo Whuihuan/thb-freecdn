@@ -98,6 +98,7 @@ function getCDN()
         do
             writeTxt "\t$url"
         done
+        writeTxt "\thash=$hash"
     fi
     echo ""
 }
