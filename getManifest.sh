@@ -36,28 +36,36 @@ function testCDN()
     sourceHash=$1
     source=$2
     target=$3
-    #fastly jsdelivr
+
+    ####### CDN #######
+
+    # fastly jsdelivr
     if [ "$target" == "fastly" ];then
         host="$target.jsdelivr.net"
-        #如果是cdn.jsdelivr.net
+        # cdn.jsdelivr.net
         target=$(echo $source | sed -r "s/https:\/\/cdn.jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/npm\/\1/")
-        #如果是cdn.jsdelivr.net（Github）
+        # cdn.jsdelivr.net (github)
         target=$(echo $target | sed -r "s/https:\/\/cdn.jsdelivr.net\/gh\/([^\s]*)/https:\/\/$host\/gh\/\1/")
-        #如果是unpkg.com
+        # unpkg.com
         target=$(echo $target | sed -r "s/https:\/\/unpkg.com\/([^\s]*)/https:\/\/$host\/npm\/\1/")
     fi
-    #unpkg
+
+    # unpkg
     if [ "$target" == "unpkg" ];then
         host="unpkg.com"
-        #如果是*.jsdelivr.net
+        # *.jsdelivr.net
         target=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/\2/")
     fi
-    #bootcdn
+
+    # bootcdn
     if [ "$target" == "bootcdn" ];then
         host="cdn.bootcdn.net"
-        #如果是*.jsdelivr.net带版本
+        # *.jsdelivr.net with version
         target=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\2\/\3\/\4/")
     fi
+
+    ####### END #######
+
     if [ -z "$2" ];then
         source=""
     fi
@@ -95,7 +103,7 @@ function getCDN()
 }
 
 if [ -z "$urlPath" ];then
-    echo "请传入链接列表文件，以便生成清单"
+    echo "No url list readed."
 else
     cleanTxt
     for line in $(cat $urlPath)

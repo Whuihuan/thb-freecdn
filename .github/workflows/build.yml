@@ -1,0 +1,33 @@
+name: 发布清单
+
+on:
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+  BuildAndDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出分支
+        uses: actions/checkout@v2
+
+      - name: 执行生成清单
+        run: |
+          chmod +x getManifest.sh
+          ./getManifest.sh url.txt dist/freecdn-internal/
+
+      - name: 检查清单
+        run: |
+          cat dist/freecdn-internal/freecdn-manifest.txt
+
+      - name: 提交到发布分支
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with: 
+          branch: release
+          folder: dist
+          clean: true
+          clean-exclude: |
+            .github/*
