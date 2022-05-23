@@ -34,6 +34,11 @@ https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	https://unpkg.com/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	hash=3oOfLC/5rPcj/LanKu75tPSNSbgTTEHNzZXGGVXuDaI=
 
+https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
+	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
+	https://unpkg.com/mediawiki-inpageedit@latest/i18n/languages.json
+	hash=Xvu0Qs22jtFdoN09qJgbQa1OiYZY4Nov424EaQzb5EY=
+
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
 	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
 	https://unpkg.com/thb-calendar@latest/dist/css/app.css
