@@ -36,6 +36,7 @@ function testCDN()
     sourceHash=$1
     source=$2
     target=$3
+    targetUrl=""
 
     ####### CDN #######
 
@@ -43,25 +44,54 @@ function testCDN()
     if [ "$target" == "fastly" ];then
         host="$target.jsdelivr.net"
         # cdn.jsdelivr.net
-        target=$(echo $source | sed -r "s/https:\/\/cdn.jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/npm\/\1/")
+        targetUrl=$(echo $source | sed -r "s/https:\/\/cdn.jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/npm\/\1/")
         # cdn.jsdelivr.net (github)
-        target=$(echo $target | sed -r "s/https:\/\/cdn.jsdelivr.net\/gh\/([^\s]*)/https:\/\/$host\/gh\/\1/")
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/cdn.jsdelivr.net\/gh\/([^\s]*)/https:\/\/$host\/gh\/\1/")
         # unpkg.com
-        target=$(echo $target | sed -r "s/https:\/\/unpkg.com\/([^\s]*)/https:\/\/$host\/npm\/\1/")
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/([^\s]*)/https:\/\/$host\/npm\/\1/")
     fi
 
     # unpkg
     if [ "$target" == "unpkg" ];then
         host="unpkg.com"
         # *.jsdelivr.net
-        target=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/\2/")
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/\2/")
     fi
 
     # bootcdn
     if [ "$target" == "bootcdn" ];then
         host="cdn.bootcdn.net"
         # *.jsdelivr.net with version
-        target=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\2\/\3\/\4/")
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\2\/\3\/\4/")
+        # unpkg.com with version
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\1\/\2\/\3/")
+    fi
+
+    # staticfile
+    if [ "$target" == "staticfile" ];then
+        host="cdn.staticfile.org"
+        # *.jsdelivr.net with version
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/\2\/\3\/\4/")
+        # unpkg.com with version
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/\1\/\2\/\3/")
+    fi
+
+    # loli
+    if [ "$target" == "loli" ];then
+        host="cdnjs.loli.net"
+        # *.jsdelivr.net with version
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\2\/\3\/\4/")
+        # unpkg.com with version
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\1\/\2\/\3/")
+    fi
+
+    # cloudflare
+    if [ "$target" == "cloudflare" ];then
+        host="cdnjs.cloudflare.com"
+        # *.jsdelivr.net with version
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\2\/\3\/\4/")
+        # unpkg.com with version
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/(.*?)@(.*?)\/(.*?)/https:\/\/$host\/ajax\/libs\/\1\/\2\/\3/")
     fi
 
     ####### END #######
@@ -69,10 +99,13 @@ function testCDN()
     if [ -z "$2" ];then
         source=""
     fi
-    if [ "$target" != "$source" ];then
-        targetHash=$(getHash $target)
+    if [ "$targetUrl" != "$source" ] && [ -n "$targetUrl" ];then
+        if [ "$target" != "fastly" ] && [ "$target" != "unpkg" ];then
+            targetUrl=$(echo $targetUrl | sed 's/dist\///g')
+        fi
+        targetHash=$(getHash $targetUrl)
         if [ "$targetHash" == "$sourceHash" ];then
-            echo $target
+            echo $targetUrl
         fi
     fi
 }
@@ -82,7 +115,7 @@ function getCDN()
     hash=$(getHash $1)
     echo "Get：$1"
     echo "【Hash】$hash"
-    cdns=("fastly" "unpkg" "bootcdn")
+    cdns=("fastly" "unpkg" "bootcdn" "staticfile" "loli" "cloudflare")
     urls=()
     for cdn in ${cdns[*]}
     do
