@@ -137,7 +137,7 @@ function getCDN()
         echo "Get：$resUrl"
         hash=$(getHash $resUrl)
         echo "【Hash】$hash"
-        cdns=("fastly" "unpkg" "elemecdn" "bootcdn" "staticfile" "loli" "cloudflare")
+        cdns=("fastly" "unpkg" "bootcdn" "staticfile" "loli" "cloudflare")
         urls=()
         for cdn in ${cdns[*]}
         do
