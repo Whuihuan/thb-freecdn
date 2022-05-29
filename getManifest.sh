@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 urlPath=$1
 outPath=$2
@@ -8,37 +9,43 @@ fi
 
 function getHash()
 {
+    set -eo pipefail
     if [ ! -d "temp" ];then
         mkdir temp
     fi
-    wget $1 -q -O -t 3 -T 10 temp/temp
+    wget $1 -q -t 3 -T 10 -O temp/temp
     hash=$(openssl dgst -sha256 -binary temp/temp | openssl base64 -A)
     echo $hash
 }
 
 function cleanTemp()
 {
+    set -eo pipefail
     rm -rf temp
 }
 
 function writeTxt()
 {
+    set -eo pipefail
     echo -e "$1" >> ${outPath}freecdn-manifest.txt
 }
 
 function wirteFile()
 {
+    set -eo pipefail
     cat  $1 >> ${outPath}freecdn-manifest.txt
 }
 
 
 function cleanTxt()
 {
+    set -eo pipefail
     rm -rf ${outPath}freecdn-manifest.txt
 }
 
 function testCDN()
 {
+    set -eo pipefail
     sourceHash=$1
     source=$2
     target=$3
@@ -127,6 +134,8 @@ function testCDN()
 
 function getCDN()
 {
+    set -eo pipefail
+    getCDNStart=`date "+%Y-%m-%d %H:%M:%S"`
     origin=$1
     originArr=$(echo "$origin" | awk '{split($0,arr,",");for(i in arr) print arr[i]}')
     originArr=($originArr)
@@ -137,7 +146,7 @@ function getCDN()
         echo "Get：$resUrl"
         hash=$(getHash $resUrl)
         echo "【Hash】$hash"
-        cdns=("fastly" "unpkg" "bootcdn" "staticfile" "loli" "cloudflare")
+        cdns=("fastly" "unpkg" "elemecdn" "bootcdn" "staticfile" "loli" "cloudflare")
         urls=()
         for cdn in ${cdns[*]}
         do
@@ -165,6 +174,9 @@ function getCDN()
             done
             writeTxt "\thash=$hash"
         fi
+        getCDNEnd=`date "+%Y-%m-%d %H:%M:%S"`
+        getCDNDuration=`echo $(($(date +%s -d "${getCDNEnd}") - $(date +%s -d "${getCDNStart}"))) | awk '{t=split("60 s 60 m 24 h 999 d",a);for(n=1;n<t;n+=2){if($1==0)break;s=$1%a[n]a[n+1]s;$1=int($1/a[n])}print s}'`
+        echo "【TIME】： $getCDNDuration"
         echo ""
     fi
 }
@@ -172,6 +184,7 @@ function getCDN()
 if [ -z "$urlPath" ];then
     echo "No url list readed."
 else
+    getStart=`date "+%Y-%m-%d %H:%M:%S"`
     cleanTxt
     for line in $(cat $urlPath)
     do
@@ -182,4 +195,9 @@ else
     done
     wirteFile params.txt
     cleanTemp
+    echo ""
+    getEnd=`date "+%Y-%m-%d %H:%M:%S"`
+    getDuration=`echo $(($(date +%s -d "${getEnd}") - $(date +%s -d "${getStart}"))) | awk '{t=split("60 s 60 m 24 h 999 d",a);for(n=1;n<t;n+=2){if($1==0)break;s=$1%a[n]a[n+1]s;$1=int($1/a[n])}print s}'`
+    echo "【TIME】： $getDuration"
 fi
+return 0;
