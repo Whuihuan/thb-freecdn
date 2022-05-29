@@ -7,6 +7,7 @@ https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css
 https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js
 	https://fastly.jsdelivr.net/npm/vue@2/dist/vue.min.js
 	https://unpkg.com/vue@2/dist/vue.min.js
+	https://npm.elemecdn.com/vue@2/dist/vue.min.js
 	hash=kXTEJcRFN330VirZFl6gj9+UM6gIKW195fYZeR3xDhc=
 
 https://cdn.jsdelivr.net/npm/vue@2/dist/vue.runtime.min.js
@@ -78,7 +79,6 @@ https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
 	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
 	https://unpkg.com/thb-calendar@latest/dist/js/app.js
-	https://npm.elemecdn.com/thb-calendar@latest/dist/js/app.js
 	hash=zl05ecgENyoQ0UDvAdf9z9CxpjAkdIwWl1c3u2SLbwM=
 
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
