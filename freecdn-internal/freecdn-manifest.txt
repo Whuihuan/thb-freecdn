@@ -7,7 +7,6 @@ https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css
 https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js
 	https://fastly.jsdelivr.net/npm/vue@2/dist/vue.min.js
 	https://unpkg.com/vue@2/dist/vue.min.js
-	https://npm.elemecdn.com/vue@2/dist/vue.min.js
 	hash=kXTEJcRFN330VirZFl6gj9+UM6gIKW195fYZeR3xDhc=
 
 https://cdn.jsdelivr.net/npm/vue@2/dist/vue.runtime.min.js
@@ -58,8 +57,6 @@ https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
 	https://npm.elemecdn.com/swiper@6.8.4/swiper-bundle.min.js
 	hash=RrWo40YKfsj+YEOt52K8QNGHNcPbd6aOS+rVaz3n81U=
 
-
-
 https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	https://unpkg.com/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
@@ -95,7 +92,6 @@ https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
 	https://unpkg.com/thb-calendar@latest/dist/js/chunk-vendors.js
 	https://npm.elemecdn.com/thb-calendar@latest/dist/js/chunk-vendors.js
 	hash=FOFx768aNIyo0VEgB5MxZy9ScRKjQruxTQPQBf2AQ1U=
-
 
 https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 	https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
