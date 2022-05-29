@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipefail
+#set -eo pipefail
 
 urlPath=$1
 outPath=$2
@@ -9,7 +9,7 @@ fi
 
 function getHash()
 {
-    set -eo pipefail
+    #set -eo pipefail
     if [ ! -d "temp" ];then
         mkdir temp
     fi
@@ -20,32 +20,32 @@ function getHash()
 
 function cleanTemp()
 {
-    set -eo pipefail
+    #set -eo pipefail
     rm -rf temp
 }
 
 function writeTxt()
 {
-    set -eo pipefail
+    #set -eo pipefail
     echo -e "$1" >> ${outPath}freecdn-manifest.txt
 }
 
 function wirteFile()
 {
-    set -eo pipefail
+    #set -eo pipefail
     cat  $1 >> ${outPath}freecdn-manifest.txt
 }
 
 
 function cleanTxt()
 {
-    set -eo pipefail
+    #set -eo pipefail
     rm -rf ${outPath}freecdn-manifest.txt
 }
 
 function testCDN()
 {
-    set -eo pipefail
+    #set -eo pipefail
     sourceHash=$1
     source=$2
     target=$3
@@ -134,7 +134,7 @@ function testCDN()
 
 function getCDN()
 {
-    set -eo pipefail
+    #set -eo pipefail
     getCDNStart=`date "+%Y-%m-%d %H:%M:%S"`
     origin=$1
     originArr=$(echo "$origin" | awk '{split($0,arr,",");for(i in arr) print arr[i]}')
@@ -200,4 +200,3 @@ else
     getDuration=`echo $(($(date +%s -d "${getEnd}") - $(date +%s -d "${getStart}"))) | awk '{t=split("60 s 60 m 24 h 999 d",a);for(n=1;n<t;n+=2){if($1==0)break;s=$1%a[n]a[n+1]s;$1=int($1/a[n])}print s}'`
     echo "【TIME】： $getDuration"
 fi
-return 0;
