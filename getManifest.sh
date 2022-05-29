@@ -11,7 +11,7 @@ function getHash()
     if [ ! -d "temp" ];then
         mkdir temp
     fi
-    wget $1 -q -O temp/temp
+    wget $1 -q -O -t 3 -T 10 temp/temp
     hash=$(openssl dgst -sha256 -binary temp/temp | openssl base64 -A)
     echo $hash
 }
