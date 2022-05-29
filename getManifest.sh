@@ -26,6 +26,12 @@ function writeTxt()
     echo -e "$1" >> ${outPath}freecdn-manifest.txt
 }
 
+function wirteFile()
+{
+    cat  $1 >> ${outPath}freecdn-manifest.txt
+}
+
+
 function cleanTxt()
 {
     rm -rf ${outPath}freecdn-manifest.txt
@@ -56,6 +62,15 @@ function testCDN()
         host="unpkg.com"
         # *.jsdelivr.net
         targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/\2/")
+    fi
+
+    # elemecdn
+    if [ "$target" == "elemecdn" ];then
+        host="npm.elemecdn.com"
+        # *.jsdelivr.net
+        targetUrl=$(echo $source | sed -r "s/https:\/\/([^\s]*).jsdelivr.net\/npm\/([^\s]*)/https:\/\/$host\/\2/")
+        # unpkg.com
+        targetUrl=$(echo $targetUrl | sed -r "s/https:\/\/unpkg.com\/([^\s]*)/https:\/\/$host\/\1/")
     fi
 
     # bootcdn
@@ -100,7 +115,7 @@ function testCDN()
         source=""
     fi
     if [ "$targetUrl" != "$source" ] && [ -n "$targetUrl" ];then
-        if [ "$target" != "fastly" ] && [ "$target" != "unpkg" ];then
+        if [ "$target" != "fastly" ] && [ "$target" != "unpkg" ] && [ "$target" != "elemecdn" ];then
             targetUrl=$(echo $targetUrl | sed 's/dist\///g')
         fi
         targetHash=$(getHash $targetUrl)
@@ -112,28 +127,46 @@ function testCDN()
 
 function getCDN()
 {
-    hash=$(getHash $1)
-    echo "Get：$1"
-    echo "【Hash】$hash"
-    cdns=("fastly" "unpkg" "bootcdn" "staticfile" "loli" "cloudflare")
-    urls=()
-    for cdn in ${cdns[*]}
-    do
-        url=$(testCDN $hash $1 $cdn)
-        if [ -n "$url" ];then
-            echo "【CDN】【$cdn】：$url"
-            urls+=($url)
-        fi
-    done
-    if [ ${#urls[@]} -gt 0  ];then
-        writeTxt "$1"
-        for url in ${urls[*]}
+    origin=$1
+    originArr=$(echo "$origin" | awk '{split($0,arr,",");for(i in arr) print arr[i]}')
+    originArr=($originArr)
+    if [ -z "${originArr[0]}" ];then
+        echo "Error resource url."
+    else
+        resUrl=${originArr[0]}
+        echo "Get：$resUrl"
+        hash=$(getHash $resUrl)
+        echo "【Hash】$hash"
+        cdns=("fastly" "unpkg" "elemecdn" "bootcdn" "staticfile" "loli" "cloudflare")
+        urls=()
+        for cdn in ${cdns[*]}
         do
-            writeTxt "\t$url"
+            url=$(testCDN $hash $resUrl $cdn)
+            if [ -n "$url" ];then
+                echo "【CDN】【$cdn】：$url"
+                urls+=($url)
+            fi
         done
-        writeTxt "\thash=$hash"
+        if [ ${#urls[@]} -gt 0  ];then
+            writeTxt "$resUrl"
+            for url in ${urls[*]}
+            do
+                writeTxt "\t$url"
+            done
+            for i in $(seq 0 ${#originArr[@]})
+            do
+                if [ "$i" == "0" ];then
+                    continue
+                fi
+                param=${originArr[$i]}
+                if [ -n "$param" ];then
+                    writeTxt "\t$param"
+                fi
+            done
+            writeTxt "\thash=$hash"
+        fi
+        echo ""
     fi
-    echo ""
 }
 
 if [ -z "$urlPath" ];then
@@ -147,5 +180,6 @@ else
             writeTxt ""
         fi
     done
+    wirteFile params.txt
     cleanTemp
 fi

@@ -1,0 +1,23 @@
+@update
+	services=wss://freecdn1.etherdream.com:30000 wss://freecdn2.etherdream.com:30000
+	interval=100s
+
+@weight
+	cdn.staticfile.org=30
+	cdnjs.loli.net=40
+	cdn.bootcdn.net=50
+	npm.elemecdn.com=60
+	fastly.jsdelivr.net=70
+	unpkg.com=80
+	cdnjs.cloudflare.com=90
+	cdn.jsdelivr.net=100
+
+@weight zh-cn
+	npm.elemecdn.com=100
+	cdn.staticfile.org=90
+	cdnjs.loli.net=80
+	cdn.bootcdn.net=70
+	fastly.jsdelivr.net=60
+	unpkg.com=60
+	cdnjs.cloudflare.com=50
+	cdn.jsdelivr.net=40
