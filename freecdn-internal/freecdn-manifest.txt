@@ -1,7 +1,11 @@
 https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css
 	https://fastly.jsdelivr.net/npm/font-touhou98/dist/touhou98.css
 	https://unpkg.com/font-touhou98/dist/touhou98.css
-	https://npm.elemecdn.com/font-touhou98/dist/touhou98.css
+	hash=ICYa3K8W/hCtsqIOANOYCyhL65U1SW4mfXSXSkDqD/Y=
+
+https://cdn.jsdelivr.net/npm/font-touhou98@1.0.0/dist/touhou98.css
+	https://fastly.jsdelivr.net/npm/font-touhou98@1.0.0/dist/touhou98.css
+	https://unpkg.com/font-touhou98@1.0.0/dist/touhou98.css
 	hash=ICYa3K8W/hCtsqIOANOYCyhL65U1SW4mfXSXSkDqD/Y=
 
 https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js
@@ -46,18 +50,6 @@ https://cdn.jsdelivr.net/npm/swiper@8.2.2/swiper-bundle.min.js
 	https://npm.elemecdn.com/swiper@8.2.2/swiper-bundle.min.js
 	hash=/e2exYIK0WXVs2pvI/rEsPLRsy5xTWUcCBEiRCwN8nc=
 
-https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
-	https://fastly.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
-	https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css
-	https://npm.elemecdn.com/swiper@6.8.4/swiper-bundle.min.css
-	hash=vAuOjPTTVNqZLjthS8Ihx5PnTuEa1quXYLPNll0Uxms=
-
-https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
-	https://fastly.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
-	https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js
-	https://npm.elemecdn.com/swiper@6.8.4/swiper-bundle.min.js
-	hash=RrWo40YKfsj+YEOt52K8QNGHNcPbd6aOS+rVaz3n81U=
-
 https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 	https://unpkg.com/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
@@ -68,28 +60,28 @@ https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
 	https://unpkg.com/mediawiki-inpageedit@latest/i18n/languages.json
 	hash=poSDgz6C9yjReeiLd1JYkRWmKC5zpfCsEYlacgY1yBU=
 
-https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
-	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
-	https://unpkg.com/thb-calendar@latest/dist/css/app.css
-	https://npm.elemecdn.com/thb-calendar@latest/dist/css/app.css
-	hash=ofL8TqF2mnggDC8B5ZBosBhxDL0sb5ktQls18jhcvwI=
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
+	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
+	https://unpkg.com/thb-calendar@0.1.5/dist/css/app.css
+	https://npm.elemecdn.com/thb-calendar@0.1.5/dist/css/app.css
+	hash=9B+mh2YE8y4OyhgzKKL++r2ESTYgOfw9aFv28hW8L2w=
 
-https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
-	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
-	https://unpkg.com/thb-calendar@latest/dist/js/app.js
-	https://npm.elemecdn.com/thb-calendar@latest/dist/js/app.js
-	hash=zl05ecgENyoQ0UDvAdf9z9CxpjAkdIwWl1c3u2SLbwM=
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/app.js
+	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/app.js
+	https://unpkg.com/thb-calendar@0.1.5/dist/js/app.js
+	https://npm.elemecdn.com/thb-calendar@0.1.5/dist/js/app.js
+	hash=d90JtDHkXP1pUHGE20tvUtstAUvcw+dQtuRt0Ccwpto=
 
-https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
-	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
-	https://unpkg.com/thb-calendar@latest/dist/css/chunk-vendors.css
-	https://npm.elemecdn.com/thb-calendar@latest/dist/css/chunk-vendors.css
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/chunk-vendors.css
+	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/chunk-vendors.css
+	https://unpkg.com/thb-calendar@0.1.5/dist/css/chunk-vendors.css
+	https://npm.elemecdn.com/thb-calendar@0.1.5/dist/css/chunk-vendors.css
 	hash=AEyDK/9HyD3T/bbkEmtHK/nPKGCD+oQYCQBQvcvPHhk=
 
-https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
-	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
-	https://unpkg.com/thb-calendar@latest/dist/js/chunk-vendors.js
-	https://npm.elemecdn.com/thb-calendar@latest/dist/js/chunk-vendors.js
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/chunk-vendors.js
+	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/chunk-vendors.js
+	https://unpkg.com/thb-calendar@0.1.5/dist/js/chunk-vendors.js
+	https://npm.elemecdn.com/thb-calendar@0.1.5/dist/js/chunk-vendors.js
 	hash=FOFx768aNIyo0VEgB5MxZy9ScRKjQruxTQPQBf2AQ1U=
 
 https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
@@ -111,6 +103,40 @@ https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdnjs.loli.net/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	hash=Kt78vAQefRj88tQXh53FoJmXqmTWdbejxLbOM9oT8/4=
+
+https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
+	https://fastly.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
+	https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css
+	https://npm.elemecdn.com/swiper@6.8.4/swiper-bundle.min.css
+	hash=vAuOjPTTVNqZLjthS8Ihx5PnTuEa1quXYLPNll0Uxms=
+
+https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
+	https://fastly.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
+	https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js
+	https://npm.elemecdn.com/swiper@6.8.4/swiper-bundle.min.js
+	hash=RrWo40YKfsj+YEOt52K8QNGHNcPbd6aOS+rVaz3n81U=
+
+https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
+	https://unpkg.com/thb-calendar@latest/dist/css/app.css
+	hash=9B+mh2YE8y4OyhgzKKL++r2ESTYgOfw9aFv28hW8L2w=
+
+https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
+	https://unpkg.com/thb-calendar@latest/dist/js/app.js
+	hash=d90JtDHkXP1pUHGE20tvUtstAUvcw+dQtuRt0Ccwpto=
+
+https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
+	https://unpkg.com/thb-calendar@latest/dist/css/chunk-vendors.css
+	https://npm.elemecdn.com/thb-calendar@latest/dist/css/chunk-vendors.css
+	hash=AEyDK/9HyD3T/bbkEmtHK/nPKGCD+oQYCQBQvcvPHhk=
+
+https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
+	https://unpkg.com/thb-calendar@latest/dist/js/chunk-vendors.js
+	https://npm.elemecdn.com/thb-calendar@latest/dist/js/chunk-vendors.js
+	hash=FOFx768aNIyo0VEgB5MxZy9ScRKjQruxTQPQBf2AQ1U=
 
 @update
 	services=wss://freecdn1.etherdream.com:30000 wss://freecdn2.etherdream.com:30000
