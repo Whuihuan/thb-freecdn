@@ -18,10 +18,10 @@ https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
 https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
 
 #THB日历
-https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
-https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/app.js
-https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/chunk-vendors.css
-https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/chunk-vendors.js
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.6/dist/css/app.css
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.6/dist/js/app.js
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.6/dist/css/chunk-vendors.css
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.6/dist/js/chunk-vendors.js
 
 #FontAwesome
 https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
@@ -34,6 +34,10 @@ https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
 https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
 
 #THB日历
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/app.js
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/chunk-vendors.css
+https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/chunk-vendors.js
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/chunk-vendors.css
