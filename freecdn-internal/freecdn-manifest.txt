@@ -99,7 +99,6 @@ https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://unpkg.com/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
-	https://npm.elemecdn.com/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdn.staticfile.org/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdnjs.loli.net/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
@@ -121,7 +120,6 @@ https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js
 https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
 	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.5/dist/css/app.css
 	https://unpkg.com/thb-calendar@0.1.5/dist/css/app.css
-	https://npm.elemecdn.com/thb-calendar@0.1.5/dist/css/app.css
 	hash=9B+mh2YE8y4OyhgzKKL++r2ESTYgOfw9aFv28hW8L2w=
 
 https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/app.js
@@ -143,10 +141,12 @@ https://cdn.jsdelivr.net/npm/thb-calendar@0.1.5/dist/js/chunk-vendors.js
 	hash=FOFx768aNIyo0VEgB5MxZy9ScRKjQruxTQPQBf2AQ1U=
 
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/css/app.css
 	https://unpkg.com/thb-calendar@latest/dist/css/app.css
 	hash=mWe07wWaq3sNm/iW9FN3ynJf7PJCY0CRbwWEhVBIwBI=
 
 https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
+	https://fastly.jsdelivr.net/npm/thb-calendar@latest/dist/js/app.js
 	https://unpkg.com/thb-calendar@latest/dist/js/app.js
 	hash=Wmx0MKPm0r/TEP1BLdR0PnLF6uNyZ4qVNwy9bzbdpfs=
 
@@ -161,10 +161,6 @@ https://cdn.jsdelivr.net/npm/thb-calendar@latest/dist/js/chunk-vendors.js
 	https://unpkg.com/thb-calendar@latest/dist/js/chunk-vendors.js
 	https://npm.elemecdn.com/thb-calendar@latest/dist/js/chunk-vendors.js
 	hash=FOFx768aNIyo0VEgB5MxZy9ScRKjQruxTQPQBf2AQ1U=
-
-@update
-	services=wss://freecdn1.etherdream.com:30000 wss://freecdn2.etherdream.com:30000
-	interval=100s
 
 @weight
 	cdn.staticfile.org=30
