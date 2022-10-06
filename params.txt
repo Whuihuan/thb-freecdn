@@ -1,7 +1,3 @@
-@update
-	services=wss://freecdn1.etherdream.com:30000 wss://freecdn2.etherdream.com:30000
-	interval=100s
-
 @weight
 	cdn.staticfile.org=30
 	cdnjs.loli.net=40
