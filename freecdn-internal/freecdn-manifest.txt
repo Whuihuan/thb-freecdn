@@ -52,15 +52,17 @@ https://cdn.jsdelivr.net/npm/swiper@8.2.2/swiper-bundle.min.js
 	https://npm.elemecdn.com/swiper@8.2.2/swiper-bundle.min.js
 	hash=/e2exYIK0WXVs2pvI/rEsPLRsy5xTWUcCBEiRCwN8nc=
 
-https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
-	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
-	https://unpkg.com/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
-	hash=bXVwh/4zIJfnghJ8axwliM1IHvm9Tt14VPxIfn2A8qs=
+https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@14.3.3/dist/InPageEdit.min.js
+	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@14.3.3/dist/InPageEdit.min.js
+	https://unpkg.com/mediawiki-inpageedit@14.3.3/dist/InPageEdit.min.js
+	https://npm.elemecdn.com/mediawiki-inpageedit@14.3.3/dist/InPageEdit.min.js
+	hash=fKFxuVnvE0uP5jwMUT85I/To8x8AcZP6fNWTB95VykY=
 
-https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
-	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
-	https://unpkg.com/mediawiki-inpageedit@latest/i18n/languages.json
-	hash=poSDgz6C9yjReeiLd1JYkRWmKC5zpfCsEYlacgY1yBU=
+https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@14.3.3/i18n/languages.json
+	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@14.3.3/i18n/languages.json
+	https://unpkg.com/mediawiki-inpageedit@14.3.3/i18n/languages.json
+	https://npm.elemecdn.com/mediawiki-inpageedit@14.3.3/i18n/languages.json
+	hash=+939Rn61wZ9Mc4X853jh3e/ia1oLbHhDRy1/F6oWl8o=
 
 https://cdn.jsdelivr.net/npm/thb-calendar@0.1.6/dist/css/app.css
 	https://fastly.jsdelivr.net/npm/thb-calendar@0.1.6/dist/css/app.css
@@ -99,11 +101,22 @@ https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
 https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://unpkg.com/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
+	https://npm.elemecdn.com/font-awesome@4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdn.staticfile.org/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdnjs.loli.net/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2
 	hash=Kt78vAQefRj88tQXh53FoJmXqmTWdbejxLbOM9oT8/4=
+
+https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
+	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
+	https://unpkg.com/mediawiki-inpageedit@latest/dist/InPageEdit.min.js
+	hash=fKFxuVnvE0uP5jwMUT85I/To8x8AcZP6fNWTB95VykY=
+
+https://cdn.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
+	https://fastly.jsdelivr.net/npm/mediawiki-inpageedit@latest/i18n/languages.json
+	https://unpkg.com/mediawiki-inpageedit@latest/i18n/languages.json
+	hash=+939Rn61wZ9Mc4X853jh3e/ia1oLbHhDRy1/F6oWl8o=
 
 https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
 	https://fastly.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css
